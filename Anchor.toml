@@ -1,0 +1,15 @@
+[toolchain]
+
+[features]
+resolution = false
+skip-lint = false
+
+[programs.devnet]
+veliagent = "FBqd9AH9gRjRFLP7ghMBXC747WxzKrbrF6qBq6qm4Muq"
+
+[registry]
+url = "https://api.devnet.solana.com"
+
+[provider]
+cluster = "Devnet"
+wallet = "~/.config/solana/id.json"

@@ -1,0 +1,62 @@
+{
+  "scripts": {
+    "lint:fix": "prettier */*.js \"*/**/*{.js,.ts}\" -w",
+    "lint": "prettier */*.js \"*/**/*{.js,.ts}\" --check",
+    "gen_new_wallet": "solana-keygen new --force",
+    "get_address": "solana address",
+    "get_sol_devnet": "solana airdrop 5",
+    "get_balance": "solana balance",
+    "build": "anchor build",
+    "deploy": "anchor deploy",
+    "run: initial": "ts-node scripts/initialize.ts",
+    "run: stake": "ts-node scripts/stake.ts",
+    "run: get_user": "ts-node scripts/get_user.ts",
+    "run: get_pool": "ts-node scripts/get_pool.ts",
+    "run: set_parameters": "ts-node scripts/set_parameters.ts",
+    "run: create_sig": "ts-node scripts/create_sig.ts",
+    "run: claim": "ts-node scripts/claim.ts",
+    "run: withdraw_sol": "ts-node scripts/withdraw_sol.ts",
+
+    "run: commit_multi_wallet": "ts-node tests/commit_multi_wallet.ts",
+    "run: claim_multi_wallet": "ts-node tests/claim_multi_wallet.ts",
+    "run: gen_wallet": "ts-node tests/gen_wallet.ts",
+
+    "run: CreatCollection": "ts-node tests/CreateCollection.ts",
+    "run: MintNFT": "ts-node tests/mint_nft.ts",
+    "run: CreateSig": "ts-node tests/CreateSig.ts",
+    "run: MintWithSig": "ts-node tests/mintNFTwithSig.ts",
+    "run: BuyNode": "ts-node tests/BuyNode.ts",
+    "run: mint_collection": "ts-node tests/mint_collection.ts",
+    "run: create_token": "ts-node tests/create_token.ts",
+    "run: mint_token": "ts-node tests/mint_token.ts",
+    "run: burn_token": "ts-node tests/burn_token.ts",
+    "run: create_wallet": "ts-node tests/create_wallet.ts",
+    "run: revoke_mint_authority": "ts-node tests/revoke_mint_authority.ts"
+  },
+  "dependencies": {
+    "@coral-xyz/anchor": "0.30.1",
+    "@metaplex-foundation/js": "^0.20.1",
+    "@metaplex-foundation/mpl-candy-machine": "^6.0.1",
+    "@metaplex-foundation/mpl-token-metadata": "^3.2.1",
+    "@metaplex-foundation/umi": "^0.9.1",
+    "@metaplex-foundation/umi-bundle-defaults": "^0.9.1",
+    "@metaplex-foundation/umi-signer-wallet-adapters": "^0.9.1",
+    "@noble/ed25519": "^2.1.0",
+    "@project-serum/anchor": "^0.26.0",
+    "@solana/spl-token": "0.4.8",
+    "bs58": "^5.0.0",
+    "dotenv": "^16.4.5",
+    "ethers": "5.6.2",
+    "micro-ed25519-hdkey": "^0.1.2"
+  },
+  "devDependencies": {
+    "@types/bn.js": "^5.1.0",
+    "@types/chai": "^4.3.0",
+    "@types/mocha": "^9.0.0",
+    "chai": "^4.3.4",
+    "mocha": "^9.0.3",
+    "prettier": "^2.6.2",
+    "ts-mocha": "^10.0.0",
+    "typescript": "^4.3.5"
+  }
+}
